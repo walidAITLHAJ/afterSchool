@@ -4,10 +4,20 @@ $n = count($events);
 
 <section class="clean-block slider dark">
     <div class="container">
-        <div class="block-heading">
-            <h2 class="text-info">ÉVÈNEMENTS</h2>
-            <p style="font-size: 20px;">D&eacute;couvrez nos prochains &eacute;v&eacute;nements :</p>
-        </div>
+                            <table class="event_calender table">
+                    <thead class="event_title">
+                    <tr>
+                        <th>
+                            <i class="ion-ios-calendar-outline"></i>
+                            <span>next events calendar</span>
+                        </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+
+
+                    </thead>
+                    </table>
         <?php
         if ($n > 0) {
         ?>
@@ -18,18 +28,19 @@ $n = count($events);
                 $date = $events[0]['date_fin'];
 
                 if ($events[0]['photo'] != '') {
-                    $pic = "data:image/*;base64," . base64_encode($events[0]['photo']);
+                    $pic = "img/default-thumbnail.png";
+                   // $pic = "data:image/*;base64," . base64_encode($events[0]['photo']);
                 } else {
-                    $pic = "img/profile.png";
+                    $pic = "img/default-thumbnail.png";
                 }
                 ?>
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
-                        <img class="d-block w-100 carousel-img" src=<?php echo htmlspecialchars($pic) ?> alt="Event Image">
+                        <img class="d-block w-100 carousel-img" style="height: 600px; margin-bottom : -200px" src=<?php echo htmlspecialchars($pic) ?> alt="Event Image">
                         <div class="text-center">
-                            <h2 class="text-center"><?php echo htmlspecialchars($event_title) ?></h2>
-                            <h6><?php echo htmlspecialchars($date) ?></h6>
-                            <p><br><?php echo htmlspecialchars($discr) ?><br><br></p>
+                            <h2 class="text-center" style="color:white"><?php echo htmlspecialchars($event_title) ?></h2>
+                            <h6 style="color:white"><?php echo htmlspecialchars($date) ?></h6>
+                            <p style="color:white"><br><?php echo htmlspecialchars($discr) ?><br><br></p>
                         </div>
                     </div>
                     <?php
@@ -84,4 +95,5 @@ $n = count($events);
             </div>
         <?php } ?>
     </div>
+    <br><br>
 </section>

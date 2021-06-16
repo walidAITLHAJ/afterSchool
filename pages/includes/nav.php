@@ -10,8 +10,8 @@ $list_all_clubs = $all_clubs->fetchAll();
 <nav id="nav_bar" class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background-repeat: no-repeat;">
     <div class="container-fluid d-flex flex-column p-0">
         <button id="close_nav" class="btn btn-primary float-right" type="button">X</button>
-        <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="/pages/">
-            <img src="assets/img/Logo.svg" alt="" width="85px">
+        <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="/afterSchool">
+            <img src="assets/img/Logo.png" alt="" width="160px">
         </a>
         <hr class="sidebar-divider my-0">
         <ul class="nav navbar-nav text-light" id="accordionSidebar">
