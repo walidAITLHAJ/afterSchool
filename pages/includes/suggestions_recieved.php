@@ -1,5 +1,5 @@
 <?php
-require_once '../../pfa_db_connection/connexion.php';
+require_once 'connexion.php';
 
 ?>
 
@@ -28,6 +28,7 @@ require_once '../../pfa_db_connection/connexion.php';
                         <div class="row justify-content-center" style="margin-top: 1rem;">
                             <div class="col-auto m-auto">
                                 <div class="row">
+			<div class="col-auto m-auto"><img class="border rounded-circle img-profile" style="float: left; width: 100px"src=<?php echo htmlspecialchars($avatar) ?> /></div>
                                     <div class="col">
                                         <h3 class="float-right" style="font-size: 130%;"><?php echo htmlspecialchars($username) ?></h3>
                                     </div>
@@ -38,11 +39,11 @@ require_once '../../pfa_db_connection/connexion.php';
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-auto m-auto"><img class="border rounded-circle img-profile" src=<?php echo htmlspecialchars($avatar) ?> /></div>
+                            
                         </div>
                         <div class="row">
-                            <div class="col-xl-11 offset-xl-1" style="margin-top: 1rem;">
-                                <p class="text-center"><?php echo htmlspecialchars($suggestion) ?><br><br></p><span class="float-right" style="margin-right: 1rem;"><?php echo htmlspecialchars($date) ?></span>
+                            <div class="col-xl-11 offset-xl-1" style="margin-top: 1rem; text-align:center">
+                                <p class="text-center"><?php echo htmlspecialchars($suggestion) ?><br><br></p><span style="text-align:center" ><?php echo htmlspecialchars($date) ?></span>
                             </div>
                         </div>
                         <div>

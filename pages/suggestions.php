@@ -45,7 +45,7 @@ $statut = $_SESSION['statut'];
                     <?php include 'includes/suggest.php' ?>
                     <div class="row">
                         <!--suggestion sent-->
-                        <?php include 'includes/suggestions_sent.php' ?>
+                        <?php include 'includes/suggestions_sent.php'; ?>
                         <!--suggestion received-->
                         <?php
                         // if ($statut == 'PC' or $statut == 'PA') {
@@ -57,7 +57,7 @@ $statut = $_SESSION['statut'];
             </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © ENSIASClub 2020</span></div>
+                    <div class="text-center my-auto copyright"><span>Copyright © AfterSchool 2021</span></div>
                 </div>
             </footer>
         </div>

@@ -42,12 +42,12 @@ if (!isset($_SESSION['cne'])) {
 <head>
     <!-- ========== Meta Tags ========== -->
     <meta charset="UTF-8">
-    <meta name="description" content="Revent -Event managment">
-    <meta name="keywords" content="Revent , Event , Managment, Browsing">
-    <meta name="author" content="Revent Team">
+    <meta name="description" content="AfterSchool -Event managment">
+    <meta name="keywords" content="AfterSchool , Event , Managment, Browsing">
+    <meta name="author" content="AfterSchool Team">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- ========== Title ========== -->
-    <title> Revent - Event Managment</title>
+    <title> AfterSchool - Event Managment</title>
     <!-- ========== Favicon Ico ========== -->
     <!--<link rel="icon" href="fav.ico">-->
     <!-- ========== STYLESHEETS ========== -->
@@ -75,7 +75,7 @@ if (!isset($_SESSION['cne'])) {
     <header class="header navbar fixed-top navbar-expand-md sticky_header">
         <div class="container">
             <a class="navbar-brand logo" href="/">
-                <img src="assets/img/logo.png" alt="Revent">
+                <img src="assets/img/logo.png" alt="AfterSchool">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headernav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="lnr lnr-text-align-right"></span>
@@ -96,11 +96,7 @@ if (!isset($_SESSION['cne'])) {
                     <li class="nav-item">
                         <a class="nav-link " href="pages/register.php">Register</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="">logout</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="pages/profile.php">Profile</a>
+                    
                 </ul>
             </div>
         </div>
@@ -235,7 +231,7 @@ if (!isset($_SESSION['cne'])) {
                     if ($description != '') {
                     ?>
                         <td>
-                            <?php echo htmlspecialchars($discreption) ?>
+                            <?php echo htmlspecialchars($description) ?>
                         </td>
                     <?php
                     }

@@ -210,7 +210,7 @@ else $statut = $_SESSION['statut'];
 
         <footer class="bg-white sticky-footer">
             <div class="container my-auto">
-                <div class="text-center my-auto copyright"><span>Copyright © ENSIASClub 2020</span></div>
+                <div class="text-center my-auto copyright"><span>Copyright © AfterSchool 2021</span></div>
             </div>
         </footer>
     </div>

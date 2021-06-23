@@ -27,6 +27,7 @@ include "functions/get_filiere_register.php"; ?>
                     <div class="col-lg-7 m-auto">
                         <div class="p-5">
                             <div class="text-center">
+		<img src="assets/img/logo.png" alt="AfterSchool" style="width: 200px; margin-bottom:50px">
                                 <h4 class="text-dark mb-4">Create an Account!</h4>
                             </div>
                             <form class="user" method="post" action="functions/register_info.php">

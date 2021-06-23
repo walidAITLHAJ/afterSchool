@@ -19,7 +19,7 @@ for ($i = 0; $i < count($missed); $i++) {
                     <p style="margin-top: -5px;margin-bottom: -5px;">Assignée par :
                         <?php echo htmlspecialchars($source)?></p>
                     <p style="margin-bottom: 0;margin-top: 10px;"><?php echo htmlspecialchars($desc) ?>
-                        <br></p><span class="text-xs"><?php echo htmlspecialchars($date)?></span>
+                        <br>
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@ for ($i = 0; $i < count($completed); $i++) {
                     <p style="margin-top: -5px;margin-bottom: -5px;">Description :
                         <?php echo htmlspecialchars($desc)?></p> 
                     <p style="margin-bottom: 0;margin-top: 10px;"><?php echo "Remarque : ".htmlspecialchars($rmq) ?>
-                        <br></p><span class="text-xs"><?php echo htmlspecialchars($date)?></span>
+                        <br></p>
                 </div>
             </div>
         </div>
