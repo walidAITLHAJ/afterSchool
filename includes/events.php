@@ -28,15 +28,15 @@ $n = count($events);
                 $date = $events[0]['date_fin'];
 
                 if ($events[0]['photo'] != '') {
-                    $pic = "img/default-thumbnail.png";
-                   // $pic = "data:image/*;base64," . base64_encode($events[0]['photo']);
+                    
+                   $pic = "data:image/*;base64," . base64_encode($events[0]['photo']);
                 } else {
                     $pic = "img/default-thumbnail.png";
                 }
                 ?>
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
-                        <img class="d-block w-100 carousel-img" style="height: 600px; margin-bottom : -200px" src=<?php echo htmlspecialchars($pic) ?> alt="Event Image">
+                        <img class="d-block w-100 carousel-img"  src=<?php echo htmlspecialchars($pic) ?> alt="Event Image">
                         <div class="text-center">
                             <h2 class="text-center" style="color:white"><?php echo htmlspecialchars($event_title) ?></h2>
                             <h6 style="color:white"><?php echo htmlspecialchars($date) ?></h6>

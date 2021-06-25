@@ -24,10 +24,10 @@ $is_respo = "select * from responsable join cellule using (id_cellule) join club
 $s_is_respo = $pdo -> prepare($is_respo);
 $s_is_respo -> execute([$_SESSION['cne']]);
 $s_is_respo -> setFetchMode(PDO::FETCH_ASSOC);
-if ($row_r = $s_is_respo->fetchAll()) {
+if ($row_r = $s_is_respo->fetch()) {
 	$membership_req = "select cne , nom, prenom, intitule, id_cellule, acro_club, nom_club , date_i_deb,e.photo from etudiant e join inscription using(cne) join cellule using(id_cellule) join club using (id_club) where etat_insc = ? and id_club = ?";
 	$s_membership_req = $pdo->prepare($membership_req);
-	$s_membership_req->execute([$etat, $row_p['id_club']]);
+	$s_membership_req->execute([$etat, $row_r['id_club']]);
 	$s_membership_req->setFetchMode(PDO::FETCH_ASSOC);
 	$notifs['membership'] = $s_membership_req->fetchAll();
 }

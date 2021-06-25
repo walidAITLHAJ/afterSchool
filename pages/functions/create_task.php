@@ -1,6 +1,6 @@
 <?php
 session_start();
-print_r($_POST);
+
 require_once '../../connexion.php';
 if (isset($_POST['submit_dif']) or isset($_POST['submit_sel'])) {
 
@@ -31,7 +31,7 @@ if (isset($_POST['submit_dif']) or isset($_POST['submit_sel'])) {
 				$id_tache = $pdo->lastInsertId();
 
 				$all = $_SESSION['all_cell_members'];
-				print_r($_SESSION['all_cell_members']);
+				
 				$tasks_broadcast = "insert into tache_assignee (id_tache, cne, etat) values (?,?,?) ";
 				$array_tasks = [$id_tache, $all[0]['cne'], $etat];
 
@@ -40,12 +40,12 @@ if (isset($_POST['submit_dif']) or isset($_POST['submit_sel'])) {
 					array_push($array_tasks, $id_tache, $all[$i]['cne'], $etat);
 				}
 				echo $tasks_broadcast;
-				print_r($array_tasks);
+				
 				$assign_task = $pdo->prepare($tasks_broadcast);
 				$assign_task->execute($array_tasks);
 				$pdo->commit();
 				$_SESSION['msg'] = 'Tâche diffusée à tous les membres.';
-				header("Location:" . $_SERVER['HTTP_REFERER']);
+				header("Location: ../cellules.php");
 			} elseif (isset($_POST['submit_sel'])) {
 				# SELECTION DES MEMBRES
 				$etat = 'NV';
@@ -67,14 +67,15 @@ if (isset($_POST['submit_dif']) or isset($_POST['submit_sel'])) {
 
 				$pdo->commit();
 				$_SESSION['msg'] = 'Tâche diffusée aux membres séléctionnés.';
-				header("Location:" . $_SERVER['HTTP_REFERER']);
+				header("Location: ../cellules.php");
 			}
 		} catch (Exception $e) {
 			$pdo->rollBack();
 			$_SESSION['msg'] = 'Erreur lors de la Création. Veuillez essayer ultérieurement.';
-			header("Location:" . $_SERVER['HTTP_REFERER']);
+			header("Location: ../cellules.php");
 		}
 	} else {
 		//INSERTIONS VIDES
 	}
 }
+header("Location: ../cellules.php");

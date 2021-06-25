@@ -15,7 +15,7 @@ $list_all_clubs = $all_clubs->fetchAll();
         </a>
         <hr class="sidebar-divider my-0">
         <ul class="nav navbar-nav text-light" id="accordionSidebar">
-            <li class="nav-item" role="presentation"><a class="nav-link" href="/"><i class="fa fa-home"></i><span>Accueil</span></a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="/afterSchool"><i class="fa fa-home"></i><span>Accueil</span></a></li>
             <?php
             if (isset($_SESSION['cne'])) {
                 if (strcmp($select, "dashboard") == 0) {
