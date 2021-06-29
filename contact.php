@@ -92,12 +92,6 @@ if (!isset($_SESSION['cne'])) {
                     <li class="nav-item">
                         <a class="nav-link " href="pages/register.php">Register</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="">logout</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="pages/profile.php">Profile</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -141,7 +135,7 @@ if (!isset($_SESSION['cne'])) {
                     <h5>
                         After School is here for you
                     </h5>
-                    <p>We are honored to have you as a client and we want you to get the best Revent experience.</p>
+                    <p>We are honored to have you as a client and we want you to get the best AfterSchool experience.</p>
                     <p>And so if you have any questions, issues, and of course suggestions please feel free to contact us</p><ul class="social_list">
 
                     <li>

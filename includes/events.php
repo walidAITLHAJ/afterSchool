@@ -38,9 +38,9 @@ $n = count($events);
                     <div class="carousel-item active">
                         <img class="d-block w-100 carousel-img"  src=<?php echo htmlspecialchars($pic) ?> alt="Event Image">
                         <div class="text-center">
-                            <h2 class="text-center" style="color:white"><?php echo htmlspecialchars($event_title) ?></h2>
-                            <h6 style="color:white"><?php echo htmlspecialchars($date) ?></h6>
-                            <p style="color:white"><br><?php echo htmlspecialchars($discr) ?><br><br></p>
+                            <h2 class="text-center" ><?php echo htmlspecialchars($event_title) ?></h2>
+                            <h6><?php echo htmlspecialchars($date) ?></h6>
+                            <p><br><?php echo htmlspecialchars($discr) ?><br><br></p>
                         </div>
                     </div>
                     <?php
